@@ -4,7 +4,7 @@ Meteor.startup(function () {
     _.each(inscritos, function(inscrito, indexByDate){
         Inscritos.update({_id: inscrito._id}, {
             $set: {
-                index: indexByDate
+                index: (indexByDate + 1)
             }
         });
     });
