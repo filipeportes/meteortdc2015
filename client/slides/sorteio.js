@@ -1,6 +1,6 @@
 Template.sorteio.helpers({
     inscritos: function () {
-        return Inscritos.find({}, {sort: {createdAt: -1}}).fetch();
+        return Inscritos.find({}, {sort: {createdAt: -1}});
     },
     count: function () {
         return Inscritos.find({}).count();
