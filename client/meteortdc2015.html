@@ -1,0 +1,16 @@
+<head>
+    <title>#TheDevConf 2015 | São Paulo: Trilha Front-End</title>
+    <link media="all" type="text/css" href="//s3-sa-east-1.amazonaws.com/globalcodesp/tdc/2015/css/tdc-2015.css"
+          rel="stylesheet">
+    <link media="all" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <script src="//s3-sa-east-1.amazonaws.com/globalcodesp/tdc/2015/js/tdc-2015-jquery-1.11.2.min.js"
+            type="text/javascript"></script>
+</head>
+<template name="Layout">
+    {{> top}}
+    <div id="slide" class="container" >
+        {{> Template.dynamic template=main}}
+    </div>
+    {{> footer}}
+</template>
