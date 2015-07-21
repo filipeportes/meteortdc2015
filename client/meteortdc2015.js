@@ -11,6 +11,19 @@ Template.Layout.rendered = function () {
     });
 }
 
+Template.Layout.events({
+    "click #prev": function (event) {
+        event.preventDefault();
+
+        goToPrevSlide();
+    },
+    "click #next": function (event) {
+        event.preventDefault();
+
+        goToNextSlide();
+    }
+});
+
 goToNextSlide = function () {
     console.log("event next ok");
     $("#slide").animate({opacity: '0'}, "slow", function () {

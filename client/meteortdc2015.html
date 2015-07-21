@@ -9,6 +9,10 @@
 </head>
 <template name="Layout">
     {{> top}}
+    <div class="container hidden-lg" style="margin-top: 20px;">
+        <button class="btn btn-primary pull-left" id="prev">Prev</button>
+        <button class="btn btn-primary pull-right" id="next">Next</button>
+    </div>
     <div id="slide" class="container">
         {{> Template.dynamic template=main}}
     </div>
