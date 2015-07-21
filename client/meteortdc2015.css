@@ -7,22 +7,22 @@ html {
 }
 @media(max-width:767px){
     body {
-        margin-bottom: 160px !important;
+        margin-bottom: 120px !important;
     }
 }
 @media(min-width:768px){
     body {
-        margin-bottom: 160px !important;
+        margin-bottom: 120px !important;
     }
 }
 @media(min-width:992px){
     body {
-        margin-bottom: 140px !important;
+        margin-bottom: 110px !important;
     }
 }
 @media(min-width:1200px){
     body {
-        margin-bottom: 139px !important;
+        margin-bottom: 110px !important;
     }
 }
 
@@ -31,7 +31,7 @@ html {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 139px;
+    height: 104px;
     background-color: #f5f5f5;
 }
 
