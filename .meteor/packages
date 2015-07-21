@@ -11,3 +11,4 @@ twbs:bootstrap
 meteorhacks:flow-router
 meteorhacks:flow-layout
 jquery
+chriswessels:hammer

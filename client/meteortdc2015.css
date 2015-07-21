@@ -255,7 +255,7 @@ li > a {
 header {
     background: #d2edf4;
     background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
-    padding: 20px 15px 15px 15px;
+    padding: 10px 15px 15px 15px;
     position: relative;
 }
 
@@ -270,6 +270,10 @@ header {
     width: 100%;
     padding-right: 80px;
     font-size: 1em;
+}
+
+.new-task button {
+    margin-top: 10px;
 }
 
 .new-task input:focus{

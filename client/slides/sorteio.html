@@ -1,0 +1,33 @@
+<template name="sorteio">
+
+    <h1>Sorteio</h1>
+
+    <header>
+        <h1>Inscritos ({{count}})</h1>
+        <form class="new-task" >
+            <input type="text" id="nome" placeholder="Seu nome" required/>
+            <input type="email" id="email" placeholder="Seu email" required/>
+
+            <br/>
+            <button type="submit" class="btn btn-primary">Submeter</button>
+        </form>
+    </header>
+
+    <div class="row">
+        <h3>Listagem</h3>
+        <div class="col-lg-12" style="max-height: 150px; overflow: auto;">
+            <ul class="todolist">
+                {{#each inscritos}}
+                    {{> inscrito}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+</template>
+
+<template name="inscrito">
+    <li class="todoitem">
+        <strong>{{index}} - </strong><span class="text">{{nome}} / {{email}}</span>
+    </li>
+</template>

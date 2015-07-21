@@ -2,5 +2,21 @@
 
     <h1>Database Everywhere</h1>
 
+    <ul>
+        <li>Banco sincronizado com o cliente</li>
+        <li>Latency Compensation</li>
+        <li>interface "full-stack" de acesso aos dados, ou seja, a mesma api no Server e no Client</li>
+        <li>Reatividade desde o dado at&eacute; a interface</li>
+    </ul>
+    <br/>
+
+    <h3>Como Funciona?</h3>
+    <p>
+        No código de Servidor, as consultas e updates vão para o database real, como em uma aplicação server-side normal.<br/>
+        Já no código do lado Cliente, as operações são realizadas em uma "cópia local" de uma parte da base real,
+        o miniMongo no caso do MongoDB, e posteriormente sincronizadas com a base real, seguindo as regras de acesso estabelecidas.<br/>
+        A API de acesso aos dados é a mesma para ambos os códigos.<br/>
+        A parcela de dados que vai para essa cópia no cliente pode ser definida através de producers e subscribes.
+    </p>
 
 </template>
