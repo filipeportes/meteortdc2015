@@ -43,3 +43,297 @@ li > a {
     color: #101010;
     text-decoration: underline;
 }
+
+#home > .stats {
+    background: #27272b url("https://d14jjfgstdxsoz.cloudfront.net/node-bottom.png") no-repeat scroll 50% 0 / 1600px 344px;
+    color: #fff;
+    margin-top: -40px;
+    min-height: 320px;
+    padding: 0 0 55px;
+    position: relative;
+}
+@media (max-width: 992px) {
+    #home > .stats {
+        background-size: 1280px 275px;
+        min-height: 248px;
+        padding: 0;
+    }
+}
+@media (max-width: 768px) {
+    #home > .stats {
+        background-position: 50% 100%;
+        min-height: 400px;
+    }
+}
+#home > .stats .container {
+    position: relative;
+    top: 40px;
+}
+#home > .stats a.stat {
+    cursor: pointer;
+}
+#home > .stats a.stat:hover {
+    background-color: #de4f4f;
+}
+#home > .stats a.stat:hover span.stat-title {
+    color: #de4f4f;
+}
+#home > .stats .stat {
+    background-color: #27272b;
+    border: 2px solid #de4f4f;
+    border-radius: 120px;
+    color: white;
+    height: 68px;
+    position: absolute;
+    text-decoration: none;
+    transition: all 0.2s linear 0s;
+    width: 68px;
+}
+#home > .stats .stat span.value {
+    display: block;
+    font-family: "VanCondensedPro";
+    font-size: 22px;
+    line-height: 68px;
+    text-align: center;
+}
+#home > .stats .stat span.stat-title {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-left: -93px;
+    margin-top: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 250px;
+}
+@media (max-width: 992px) {
+    #home > .stats .stat span.stat-title {
+        margin-left: -42px;
+        width: 150px;
+    }
+}
+#home > .stats .stat.events-stat {
+    left: 0;
+    top: 55px;
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.events-stat {
+        left: 1px;
+        top: 80px;
+    }
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.events-stat {
+        left: 69px;
+        top: 0;
+    }
+}
+@media (max-width: 768px) {
+    #home > .stats .stat.events-stat {
+        left: 25%;
+        top: 0;
+    }
+}
+@media (max-width: 480px) {
+    #home > .stats .stat.events-stat {
+        left: 15%;
+        top: 0;
+    }
+}
+#home > .stats .stat.packages-stat {
+    left: 150px;
+    top: 135px;
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.packages-stat {
+        left: 165px;
+        top: 163px;
+    }
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.packages-stat {
+        left: 153px;
+        top: 90px;
+    }
+}
+@media (max-width: 768px) {
+    #home > .stats .stat.packages-stat {
+        left: inherit;
+        right: 25%;
+        top: 0;
+    }
+}
+@media (max-width: 480px) {
+    #home > .stats .stat.packages-stat {
+        left: inherit;
+        right: 15%;
+        top: 0;
+    }
+}
+#home > .stats .stat.stackoverflow-stat {
+    left: 396px;
+    top: 72px;
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.stackoverflow-stat {
+        left: 392px;
+        top: 97px;
+    }
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.stackoverflow-stat {
+        left: 295px;
+        top: 40px;
+    }
+}
+@media (max-width: 768px) {
+    #home > .stats .stat.stackoverflow-stat {
+        left: 25%;
+        top: 116px;
+    }
+}
+@media (max-width: 480px) {
+    #home > .stats .stat.stackoverflow-stat {
+        left: 15%;
+        top: 116px;
+    }
+}
+#home > .stats .stat.installs-stat {
+    left: 622px;
+    top: 100px;
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.installs-stat {
+        left: 664px;
+    }
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.installs-stat {
+        left: 467px;
+        top: 67px;
+    }
+}
+@media (max-width: 768px) {
+    #home > .stats .stat.installs-stat {
+        left: inherit;
+        right: 25%;
+        top: 116px;
+    }
+}
+@media (max-width: 480px) {
+    #home > .stats .stat.installs-stat {
+        left: inherit;
+        right: 15%;
+        top: 116px;
+    }
+}
+#home > .stats .stat.providers-stat {
+    left: 800px;
+    top: 144px;
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.providers-stat {
+        left: 836px;
+        top: 190px;
+    }
+}
+@media (max-width: 992px) {
+    #home > .stats .stat.providers-stat {
+        left: 608px;
+        top: 85px;
+    }
+}
+@media (max-width: 768px) {
+    #home > .stats .stat.providers-stat {
+        left: 50%;
+        margin-left: -35px;
+        top: 232px;
+    }
+}
+
+/* CSS declarations go here */
+header {
+    background: #d2edf4;
+    background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+    padding: 20px 15px 15px 15px;
+    position: relative;
+}
+
+#login-buttons {
+    display: block;
+}
+
+.new-task input {
+    box-sizing: border-box;
+    padding: 10px 0;
+    border: 1 px solid darkslateblue;
+    width: 100%;
+    padding-right: 80px;
+    font-size: 1em;
+}
+
+.new-task input:focus{
+    outline: 0;
+}
+
+.todolist {
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.delete {
+    float: right;
+    font-weight: bold;
+    background: none;
+    font-size: 1em;
+    border: none;
+    position: relative;
+}
+
+.todoitem {
+    position: relative;
+    list-style: none;
+    padding: 15px;
+    border-bottom: #eee solid 1px;
+}
+
+li .text {
+    margin-left: 10px;
+}
+
+li.checked {
+    color: #888;
+}
+
+li.checked .text {
+    text-decoration: line-through;
+}
+
+li.private {
+    background: #eee;
+    border-color: #ddd;
+}
+
+header .hide-completed {
+    float: left;
+}
+
+.toggle-private {
+    margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+    li {
+        padding: 12px 15px;
+    }
+
+    .search {
+        width: 150px;
+        clear: both;
+    }
+
+    .new-task input {
+        padding-bottom: 5px;
+    }
+}

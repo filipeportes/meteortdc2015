@@ -2,5 +2,43 @@
 
     <h1>Reatividade</h1>
 
+    <div class="row">
+        <div class="col-lg-12" style="font-size: 20px;">
+            <ul>
+                <li>
+                    Conexão nativa de duas vias entre o servidor e o cliente,
+                    permitindo atualização dinâmica e transparente das informações no cliente.
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <br/>
+    <header>
+        <h1>Todo List ({{incompleteCount}})</h1>
+        <label class="hide-completed">
+            <input type="checkbox" checked="{{hideCompleted}}" />
+            Hide Completed Tasks
+        </label>
+        <form class="new-task">
+            <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+    </header>
+
+    <ul class="todolist">
+        {{#each tasks}}
+            {{> task}}
+        {{/each}}
+    </ul>
+
+</template>
+
+<template name="task">
+    <li class="{{#if checked}}checked{{/if}} todoitem">
+        <button class="delete">&times;</button>
+
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+        <span class="text">{{text}}</span>
+    </li>
 </template>
