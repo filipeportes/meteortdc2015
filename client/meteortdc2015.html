@@ -9,10 +9,8 @@
 </head>
 <template name="Layout">
     {{> top}}
-    {{#HammerTouchArea gestureMap=myGestures}}
-        <div id="slide" class="container" >
-            {{> Template.dynamic template=main}}
-        </div>
-    {{/HammerTouchArea}}
+    <div id="slide" class="container">
+        {{> Template.dynamic template=main}}
+    </div>
     {{> footer}}
 </template>

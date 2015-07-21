@@ -11,17 +11,6 @@ Template.Layout.rendered = function () {
     });
 }
 
-Template.Layout.helpers({
-    myGestures: {
-        'swiperight #slide': function (event, templateInstance) {
-            console.log("swipe right");
-        },
-        'swipeleft #slide': function (event, templateInstance) {
-            console.log("swipe left");
-        }
-    }
-});
-
 goToNextSlide = function () {
     console.log("event next ok");
     $("#slide").animate({opacity: '0'}, "slow", function () {
