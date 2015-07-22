@@ -1,6 +1,10 @@
 Template.sorteio.helpers({
     inscritos: function () {
-        return Inscritos.find({}, {sort: {createdAt: -1}});
+        var inscr = Inscritos.find({}, {sort: {createdAt: 1}}).fetch();
+        _.each(inscr, function(inscrito, index){
+            inscrito.index = index + 1;
+        });
+        return inscr.reverse();;
     },
     count: function () {
         return Inscritos.find({}).count();
@@ -10,24 +14,32 @@ Template.sorteio.helpers({
 Template.sorteio.events({
     "click .btn": function (event) {
         var inscrito = {
-            index: Inscritos.find({}).count() + 1,
             nome: $('#nome').val(),
-            email: $('#email').val(),
-            createdAt: new Date() // current time
+            email: $('#email').val()
         }
 
         if(inscrito.email) {
-            event.preventDefault();
+            if(validateEmail(inscrito.email)){
 
-            var findInscrito = Inscritos.findOne({email: inscrito.email});
-            if(!findInscrito) {
-                Inscritos.insert(inscrito);
-                $('.new-task').trigger("reset");
-                $('#nome').val("Inscrito com sucesso!!")
+                var findInscrito = Inscritos.findOne({email: inscrito.email});
+                if(!findInscrito) {
+                    Meteor.call('addInscrito', inscrito),
+                    $('.new-task').trigger("reset");
+                    $('#nome').val("Inscrito com sucesso!!")
+                }else{
+                    $('.new-task').trigger("reset");
+                    $('#nome').val("você já se inscreveu danadinho!!")
+                }
             }else{
-                $('.new-task').trigger("reset");
-                $('#nome').val("você já se inscreveu danadinho!!")
+                $('#email').val("Email inválido!!")
+                $('#email').focus();
             }
         }
+        event.preventDefault();
     }
 });
+
+function validateEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+}
